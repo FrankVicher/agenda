@@ -1,5 +1,8 @@
-﻿namespace agenda.Data.Entities
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace agenda.Data.Entities
 {
+    [Table("MailTypes")]
     public class MailType
     {
         public int MailTypeId { get; set; }
