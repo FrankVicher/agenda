@@ -14,6 +14,7 @@ namespace agenda.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new MailTypeConfiguration());
+            modelBuilder.ApplyConfiguration(new PhoneTypeConfiguration());
             base.OnModelCreating(modelBuilder);
         }
     }

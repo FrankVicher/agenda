@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using agenda.Data;
 
 namespace agenda.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20190606152814_AddPhoneTypes")]
+    partial class AddPhoneTypes
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,32 +40,6 @@ namespace agenda.Migrations
                         new { MailTypeId = 1, IsActive = true, Name = "Trabajo" },
                         new { MailTypeId = 2, IsActive = true, Name = "Personal" },
                         new { MailTypeId = 3, IsActive = true, Name = "Otro" }
-                    );
-                });
-
-            modelBuilder.Entity("agenda.Data.Entities.PhoneType", b =>
-                {
-                    b.Property<int>("PhoneTypeId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<bool>("IsActive");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(25);
-
-                    b.HasKey("PhoneTypeId");
-
-                    b.ToTable("PhoneTypes");
-
-                    b.HasData(
-                        new { PhoneTypeId = 1, IsActive = true, Name = "Movil" },
-                        new { PhoneTypeId = 2, IsActive = true, Name = "Trabajo" },
-                        new { PhoneTypeId = 3, IsActive = true, Name = "Casa" },
-                        new { PhoneTypeId = 4, IsActive = true, Name = "Fax" },
-                        new { PhoneTypeId = 5, IsActive = true, Name = "Localizador" },
-                        new { PhoneTypeId = 6, IsActive = true, Name = "Otro" }
                     );
                 });
 #pragma warning restore 612, 618
