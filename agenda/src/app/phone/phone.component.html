@@ -1,0 +1,6 @@
+<div>
+  <select [(ngModel)]="phoneTypeId">
+    <option *ngFor="let t of phoneTypes" value="t.phoneTypeId">{{t.name}}</option>
+  </select>
+  <input type="text" name="name" [(ngModel)]="number" />
+</div>

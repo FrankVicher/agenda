@@ -11,9 +11,9 @@ export class ContactComponent implements OnInit {
   contactId: number = 0;
   name: string = '';
   company: string = '';
-  phones: object[] = [];
-  mails: object[] = [];
-  addresses: object[] = [];
+  phones: {}[] = [];
+  mails: {}[] = [];
+  addresses: {}[] = [];
   
   ngOnInit() {
   }
