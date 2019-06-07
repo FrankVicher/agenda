@@ -1,0 +1,6 @@
+<div>
+  <select [(ngModel)]="mailTypeId">
+    <option *ngFor="let t of mailTypes" value="t.mailTypeId">{{t.name}}</option>
+  </select>
+  <input type="email" name="mailAddress" [(ngModel)]="mailAddress" />
+</div>
