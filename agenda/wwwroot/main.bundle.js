@@ -21,8 +21,8 @@ webpackEmptyContext.id = 349;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(437);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(462);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(458);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(463);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(459);
 
 
 
@@ -36,6 +36,48 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dyna
 /***/ }),
 
 /***/ 457:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddressComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var AddressComponent = (function () {
+    function AddressComponent() {
+        this.addressId = 0;
+        this.street = '';
+        this.number = '';
+        this.city = '';
+        this.state = '';
+        this.country = '';
+        this.code = '';
+    }
+    AddressComponent.prototype.ngOnInit = function () {
+    };
+    AddressComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
+            selector: 'app-address',
+            template: __webpack_require__(624),
+            styles: [__webpack_require__(619)]
+        }), 
+        __metadata('design:paramtypes', [])
+    ], AddressComponent);
+    return AddressComponent;
+}());
+//# sourceMappingURL=D:/Poyectos/agenda/agenda/agenda/src/address.component.js.map
+
+/***/ }),
+
+/***/ 458:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -67,8 +109,8 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
             selector: 'app-root',
-            template: __webpack_require__(622),
-            styles: [__webpack_require__(618)]
+            template: __webpack_require__(625),
+            styles: [__webpack_require__(620)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object])
     ], AppComponent);
@@ -79,7 +121,7 @@ var AppComponent = (function () {
 
 /***/ }),
 
-/***/ 458:
+/***/ 459:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -87,10 +129,11 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(428);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(457);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__contact_contact_component__ = __webpack_require__(459);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__phone_phone_component__ = __webpack_require__(461);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__mail_mail_component__ = __webpack_require__(460);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(458);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__contact_contact_component__ = __webpack_require__(460);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__phone_phone_component__ = __webpack_require__(462);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__mail_mail_component__ = __webpack_require__(461);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__address_address_component__ = __webpack_require__(457);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -109,6 +152,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var AppModule = (function () {
     function AppModule() {
     }
@@ -119,7 +163,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_5__contact_contact_component__["a" /* ContactComponent */],
                 __WEBPACK_IMPORTED_MODULE_6__phone_phone_component__["a" /* PhoneComponent */],
                 __WEBPACK_IMPORTED_MODULE_6__phone_phone_component__["a" /* PhoneComponent */],
-                __WEBPACK_IMPORTED_MODULE_7__mail_mail_component__["a" /* MailComponent */]
+                __WEBPACK_IMPORTED_MODULE_7__mail_mail_component__["a" /* MailComponent */],
+                __WEBPACK_IMPORTED_MODULE_8__address_address_component__["a" /* AddressComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -137,7 +182,7 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 459:
+/***/ 460:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -167,8 +212,8 @@ var ContactComponent = (function () {
     ContactComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
             selector: 'app-contact',
-            template: __webpack_require__(623),
-            styles: [__webpack_require__(619)]
+            template: __webpack_require__(626),
+            styles: [__webpack_require__(621)]
         }), 
         __metadata('design:paramtypes', [])
     ], ContactComponent);
@@ -178,7 +223,7 @@ var ContactComponent = (function () {
 
 /***/ }),
 
-/***/ 460:
+/***/ 461:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -213,8 +258,8 @@ var MailComponent = (function () {
     MailComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
             selector: 'app-mail',
-            template: __webpack_require__(624),
-            styles: [__webpack_require__(620)]
+            template: __webpack_require__(627),
+            styles: [__webpack_require__(622)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object])
     ], MailComponent);
@@ -225,7 +270,7 @@ var MailComponent = (function () {
 
 /***/ }),
 
-/***/ 461:
+/***/ 462:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -259,8 +304,8 @@ var PhoneComponent = (function () {
     PhoneComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
             selector: 'app-phone',
-            template: __webpack_require__(625),
-            styles: [__webpack_require__(621)]
+            template: __webpack_require__(628),
+            styles: [__webpack_require__(623)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object])
     ], PhoneComponent);
@@ -271,7 +316,7 @@ var PhoneComponent = (function () {
 
 /***/ }),
 
-/***/ 462:
+/***/ 463:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -284,13 +329,6 @@ var environment = {
     production: false
 };
 //# sourceMappingURL=D:/Poyectos/agenda/agenda/agenda/src/environment.js.map
-
-/***/ }),
-
-/***/ 618:
-/***/ (function(module, exports) {
-
-module.exports = ""
 
 /***/ }),
 
@@ -318,32 +356,53 @@ module.exports = ""
 /***/ 622:
 /***/ (function(module, exports) {
 
-module.exports = "<ul>\r\n  <li *ngFor=\"let v of testValues\">{{v}}</li>\r\n</ul>\r\n<app-contact>....</app-contact>\r\n"
+module.exports = ""
 
 /***/ }),
 
 /***/ 623:
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <div class=\"form-group\">\r\n    <label>\r\n      Nombre:\r\n      <input type=\"text\" name=\"name\" [(ngModel)]=\"name\" />\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label>\r\n      Compañia:\r\n      <input type=\"text\" name=\"company\" [(ngModel)]=\"company\" />\r\n    </label>\r\n  </div>\r\n  <app-phone></app-phone>\r\n  <app-mail></app-mail>\r\n</div>\n"
+module.exports = ""
 
 /***/ }),
 
 /***/ 624:
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <select [(ngModel)]=\"mailTypeId\">\r\n    <option *ngFor=\"let t of mailTypes\" value=\"t.mailTypeId\">{{t.name}}</option>\r\n  </select>\r\n  <input type=\"email\" name=\"mailAddress\" [(ngModel)]=\"mailAddress\" />\r\n</div>\n"
+module.exports = "<div>\n  <div class=\"form-group\">\n    <label for=\"\">\n      Calle:\n      <input type=\"text\" [(ngModel)]=\"street\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">\n      Número:\n      <input type=\"text\" [(ngModel)]=\"number\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">\n      Ciudad:\n      <input type=\"text\" [(ngModel)]=\"city\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">\n      Estado:\n      <input type=\"text\" [(ngModel)]=\"state\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">\n      Pais:\n      <input type=\"text\" [(ngModel)]=\"Country\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">\n      Código Postal:\n      <input type=\"text\" [(ngModel)]=\"code\">\n    </label>\n  </div>\n</div>\n"
 
 /***/ }),
 
 /***/ 625:
 /***/ (function(module, exports) {
 
+module.exports = "<ul>\r\n  <li *ngFor=\"let v of testValues\">{{v}}</li>\r\n</ul>\r\n<app-contact>....</app-contact>\r\n"
+
+/***/ }),
+
+/***/ 626:
+/***/ (function(module, exports) {
+
+module.exports = "<div>\r\n  <div class=\"form-group\">\r\n    <label>\r\n      Nombre:\r\n      <input type=\"text\" name=\"name\" [(ngModel)]=\"name\" />\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label>\r\n      Compañia:\r\n      <input type=\"text\" name=\"company\" [(ngModel)]=\"company\" />\r\n    </label>\r\n  </div>\r\n  <app-phone></app-phone>\r\n  <app-mail></app-mail>\r\n  <app-address></app-address>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ 627:
+/***/ (function(module, exports) {
+
+module.exports = "<div>\r\n  <select [(ngModel)]=\"mailTypeId\">\r\n    <option *ngFor=\"let t of mailTypes\" value=\"t.mailTypeId\">{{t.name}}</option>\r\n  </select>\r\n  <input type=\"email\" name=\"mailAddress\" [(ngModel)]=\"mailAddress\" />\r\n</div>\n"
+
+/***/ }),
+
+/***/ 628:
+/***/ (function(module, exports) {
+
 module.exports = "<div>\n  <select [(ngModel)]=\"phoneTypeId\">\n    <option *ngFor=\"let t of phoneTypes\" value=\"t.phoneTypeId\">{{t.name}}</option>\n  </select>\n  <input type=\"text\" name=\"name\" [(ngModel)]=\"number\" />\n</div>\n"
 
 /***/ }),
 
-/***/ 640:
+/***/ 643:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(350);
@@ -351,5 +410,5 @@ module.exports = __webpack_require__(350);
 
 /***/ })
 
-},[640]);
+},[643]);
 //# sourceMappingURL=main.bundle.map
