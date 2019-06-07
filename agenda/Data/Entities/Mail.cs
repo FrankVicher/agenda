@@ -4,6 +4,7 @@
     {
         public int MailId { get; set; }
         public string MailAddress { get; set; }
+        public int MailTypeId { get; set; }
         public MailType Type { get; set; }
         public bool IsActive { get; set; }
     }

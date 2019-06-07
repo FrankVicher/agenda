@@ -16,6 +16,7 @@ namespace agenda.Data
             modelBuilder.ApplyConfiguration(new MailTypeConfiguration());
             modelBuilder.ApplyConfiguration(new PhoneTypeConfiguration());
             modelBuilder.ApplyConfiguration(new AddressConfiguration());
+            modelBuilder.ApplyConfiguration(new MailConfiguration());
             base.OnModelCreating(modelBuilder);
         }
     }

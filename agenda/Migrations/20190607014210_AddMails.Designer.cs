@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using agenda.Data;
 
 namespace agenda.Migrations
 {
     [DbContext(typeof(DataContext))]
-    partial class DataContextModelSnapshot : ModelSnapshot
+    [Migration("20190607014210_AddMails")]
+    partial class AddMails
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -50,27 +52,6 @@ namespace agenda.Migrations
                     b.HasKey("AddressId");
 
                     b.ToTable("Addresses");
-                });
-
-            modelBuilder.Entity("agenda.Data.Entities.Mail", b =>
-                {
-                    b.Property<int>("MailId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<bool>("IsActive");
-
-                    b.Property<string>("MailAddress")
-                        .IsRequired()
-                        .HasMaxLength(254);
-
-                    b.Property<int>("MailTypeId");
-
-                    b.HasKey("MailId");
-
-                    b.HasIndex("MailTypeId");
-
-                    b.ToTable("Mail");
                 });
 
             modelBuilder.Entity("agenda.Data.Entities.MailType", b =>
@@ -120,14 +101,6 @@ namespace agenda.Migrations
                         new { PhoneTypeId = 5, IsActive = true, Name = "Localizador" },
                         new { PhoneTypeId = 6, IsActive = true, Name = "Otro" }
                     );
-                });
-
-            modelBuilder.Entity("agenda.Data.Entities.Mail", b =>
-                {
-                    b.HasOne("agenda.Data.Entities.MailType", "Type")
-                        .WithMany()
-                        .HasForeignKey("MailTypeId")
-                        .OnDelete(DeleteBehavior.Cascade);
                 });
 #pragma warning restore 612, 618
         }
