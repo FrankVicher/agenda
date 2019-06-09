@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Http } from '@angular/http';
+import { Phone } from '../phone';
 
 @Component({
   selector: 'app-phone',
@@ -8,16 +9,20 @@ import { Http } from '@angular/http';
 })
 export class PhoneComponent implements OnInit {
 
+  @Input() phone: Phone = {
+    phoneId: 0,
+    number: '',
+    phoneTypeId: 0
+  }
   constructor(private _service: Http) { }
 
-  number: string = '';
-  phoneTypeId: number = 0;
   phoneTypes: {}[] = [];
   ngOnInit() {
+
     this._service.get('/api/phonetypes').subscribe(r => {
       this.phoneTypes = r.json();
     });
-    
+
   }
 
 }

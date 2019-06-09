@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 
 namespace agenda.Data.Entities
 {
-    public class Contact
-    {
+    public class Contact : IContact
+  {
         public int ContactId { get; set; }
         public string Name { get; set; }
         public string Company { get; set; }

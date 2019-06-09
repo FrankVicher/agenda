@@ -1,0 +1,11 @@
+br{
+    clear: both;
+}
+.left-side{
+    width: 15vw;
+    float: left;
+}
+.rigth-side{
+    width: 85vw;
+    float: right;
+}

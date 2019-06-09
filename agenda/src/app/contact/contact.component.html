@@ -11,7 +11,11 @@
       <input type="text" name="company" [(ngModel)]="company" />
     </label>
   </div>
-  <app-phone></app-phone>
+  <app-phone *ngFor="let p of phones" [phone]="p"></app-phone>
   <app-mail></app-mail>
   <app-address></app-address>
+</div>
+<div>
+  <button>Cancelar</button>
+  <button type="button" (click)="add()">Guardar</button>
 </div>

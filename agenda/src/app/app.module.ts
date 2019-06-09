@@ -8,6 +8,9 @@ import { ContactComponent } from './contact/contact.component';
 import { PhoneComponent } from './phone/phone.component';
 import { MailComponent } from './mail/mail.component';
 import { AddressComponent } from './address/address.component';
+import { ContactListComponent } from './contact-list/contact-list.component';
+
+import { ContactService} from './contact.service';
 
 @NgModule({
   declarations: [
@@ -16,14 +19,15 @@ import { AddressComponent } from './address/address.component';
     PhoneComponent,
     PhoneComponent,
     MailComponent,
-    AddressComponent
+    AddressComponent,
+    ContactListComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ContactService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,56 @@
 webpackJsonp([1,4],{
 
-/***/ 349:
+/***/ 307:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(70);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactService; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ContactService = (function () {
+    function ContactService(http) {
+        this.http = http;
+    }
+    ContactService.prototype.getContacts = function () { };
+    ContactService.prototype.createContact = function (contact) {
+        //alert('ok');
+        // let contact : any = {
+        //   contactId:0,
+        //   name: 'fvm',
+        //   company:'',
+        //   phones:[],
+        //   mails:[],
+        //   addresses:[]
+        // }
+        this.http.post('/api/contacts', contact).subscribe(function (r) {
+            alert(r.statusText);
+        }, function (e) {
+            alert(e.statusText);
+        });
+    };
+    ContactService = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["c" /* Injectable */])(), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object])
+    ], ContactService);
+    return ContactService;
+    var _a;
+}());
+//# sourceMappingURL=D:/Poyectos/agenda/agenda/agenda/src/contact.service.js.map
+
+/***/ }),
+
+/***/ 350:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -9,20 +59,20 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 349;
+webpackEmptyContext.id = 350;
 
 
 /***/ }),
 
-/***/ 350:
+/***/ 351:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(437);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(438);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(463);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(459);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(466);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(460);
 
 
 
@@ -35,7 +85,7 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ 457:
+/***/ 458:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -66,8 +116,8 @@ var AddressComponent = (function () {
     AddressComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
             selector: 'app-address',
-            template: __webpack_require__(624),
-            styles: [__webpack_require__(619)]
+            template: __webpack_require__(628),
+            styles: [__webpack_require__(622)]
         }), 
         __metadata('design:paramtypes', [])
     ], AddressComponent);
@@ -77,12 +127,12 @@ var AddressComponent = (function () {
 
 /***/ }),
 
-/***/ 458:
+/***/ 459:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(70);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -101,16 +151,12 @@ var AppComponent = (function () {
         this.testValues = [];
     }
     AppComponent.prototype.ngOnInit = function () {
-        var _this = this;
-        this._service.get('/api/values').subscribe(function (r) {
-            _this.testValues = r.json();
-        });
     };
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
             selector: 'app-root',
-            template: __webpack_require__(625),
-            styles: [__webpack_require__(620)]
+            template: __webpack_require__(629),
+            styles: [__webpack_require__(623)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object])
     ], AppComponent);
@@ -121,19 +167,21 @@ var AppComponent = (function () {
 
 /***/ }),
 
-/***/ 459:
+/***/ 460:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(196);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(428);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(458);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__contact_contact_component__ = __webpack_require__(460);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__phone_phone_component__ = __webpack_require__(462);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__mail_mail_component__ = __webpack_require__(461);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__address_address_component__ = __webpack_require__(457);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(429);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(459);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__contact_contact_component__ = __webpack_require__(462);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__phone_phone_component__ = __webpack_require__(465);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__mail_mail_component__ = __webpack_require__(463);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__address_address_component__ = __webpack_require__(458);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__contact_list_contact_list_component__ = __webpack_require__(461);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__contact_service__ = __webpack_require__(307);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -144,6 +192,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
+
 
 
 
@@ -164,14 +214,15 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_6__phone_phone_component__["a" /* PhoneComponent */],
                 __WEBPACK_IMPORTED_MODULE_6__phone_phone_component__["a" /* PhoneComponent */],
                 __WEBPACK_IMPORTED_MODULE_7__mail_mail_component__["a" /* MailComponent */],
-                __WEBPACK_IMPORTED_MODULE_8__address_address_component__["a" /* AddressComponent */]
+                __WEBPACK_IMPORTED_MODULE_8__address_address_component__["a" /* AddressComponent */],
+                __WEBPACK_IMPORTED_MODULE_9__contact_list_contact_list_component__["a" /* ContactListComponent */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_3__angular_http__["a" /* HttpModule */]
             ],
-            providers: [],
+            providers: [__WEBPACK_IMPORTED_MODULE_10__contact_service__["a" /* ContactService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_4__app_component__["a" /* AppComponent */]]
         }), 
         __metadata('design:paramtypes', [])
@@ -182,11 +233,56 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 460:
+/***/ 461:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(70);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactListComponent; });
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var ContactListComponent = (function () {
+    function ContactListComponent(_service) {
+        this._service = _service;
+        this.contacts = [];
+    }
+    ContactListComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this._service.get('/api/contacts').subscribe(function (r) {
+            _this.contacts = r.json();
+        });
+    };
+    ContactListComponent = __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
+            selector: 'app-contact-list',
+            template: __webpack_require__(630),
+            styles: [__webpack_require__(624)]
+        }), 
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object])
+    ], ContactListComponent);
+    return ContactListComponent;
+    var _a;
+}());
+//# sourceMappingURL=D:/Poyectos/agenda/agenda/agenda/src/contact-list.component.js.map
+
+/***/ }),
+
+/***/ 462:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__contact_service__ = __webpack_require__(307);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -198,37 +294,54 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var ContactComponent = (function () {
-    function ContactComponent() {
+    function ContactComponent(contactService) {
+        this.contactService = contactService;
         this.contactId = 0;
         this.name = '';
         this.company = '';
-        this.phones = [];
+        this.phones = [{ phoneId: 0,
+                phoneTypeId: 0,
+                number: ''
+            }];
         this.mails = [];
         this.addresses = [];
     }
     ContactComponent.prototype.ngOnInit = function () {
     };
+    ContactComponent.prototype.add = function () {
+        //alert('go');
+        var contact = {
+            name: this.name,
+            company: this.company,
+            phones: this.phones,
+            mails: this.mails,
+            addresses: this.addresses
+        };
+        this.contactService.createContact(contact);
+    };
     ContactComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
             selector: 'app-contact',
-            template: __webpack_require__(626),
-            styles: [__webpack_require__(621)]
+            template: __webpack_require__(631),
+            styles: [__webpack_require__(625)]
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__contact_service__["a" /* ContactService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__contact_service__["a" /* ContactService */]) === 'function' && _a) || Object])
     ], ContactComponent);
     return ContactComponent;
+    var _a;
 }());
 //# sourceMappingURL=D:/Poyectos/agenda/agenda/agenda/src/contact.component.js.map
 
 /***/ }),
 
-/***/ 461:
+/***/ 463:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(70);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MailComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -258,8 +371,8 @@ var MailComponent = (function () {
     MailComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
             selector: 'app-mail',
-            template: __webpack_require__(627),
-            styles: [__webpack_require__(622)]
+            template: __webpack_require__(632),
+            styles: [__webpack_require__(626)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object])
     ], MailComponent);
@@ -270,12 +383,28 @@ var MailComponent = (function () {
 
 /***/ }),
 
-/***/ 462:
+/***/ 464:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Phone; });
+var Phone = (function () {
+    function Phone() {
+    }
+    return Phone;
+}());
+;
+//# sourceMappingURL=D:/Poyectos/agenda/agenda/agenda/src/phone.js.map
+
+/***/ }),
+
+/***/ 465:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__phone__ = __webpack_require__(464);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PhoneComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -288,11 +417,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var PhoneComponent = (function () {
     function PhoneComponent(_service) {
         this._service = _service;
-        this.number = '';
-        this.phoneTypeId = 0;
+        this.phone = {
+            phoneId: 0,
+            number: '',
+            phoneTypeId: 0
+        };
         this.phoneTypes = [];
     }
     PhoneComponent.prototype.ngOnInit = function () {
@@ -301,22 +434,26 @@ var PhoneComponent = (function () {
             _this.phoneTypes = r.json();
         });
     };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* Input */])(), 
+        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__phone__["a" /* Phone */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__phone__["a" /* Phone */]) === 'function' && _a) || Object)
+    ], PhoneComponent.prototype, "phone", void 0);
     PhoneComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
             selector: 'app-phone',
-            template: __webpack_require__(628),
-            styles: [__webpack_require__(623)]
+            template: __webpack_require__(633),
+            styles: [__webpack_require__(627)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object])
+        __metadata('design:paramtypes', [(typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _b) || Object])
     ], PhoneComponent);
     return PhoneComponent;
-    var _a;
+    var _a, _b;
 }());
 //# sourceMappingURL=D:/Poyectos/agenda/agenda/agenda/src/phone.component.js.map
 
 /***/ }),
 
-/***/ 463:
+/***/ 466:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -332,27 +469,6 @@ var environment = {
 
 /***/ }),
 
-/***/ 619:
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ 620:
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ 621:
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
 /***/ 622:
 /***/ (function(module, exports) {
 
@@ -363,52 +479,87 @@ module.exports = ""
 /***/ 623:
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "br{\r\n    clear: both;\r\n}\r\n.left-side{\r\n    width: 15vw;\r\n    float: left;\r\n}\r\n.rigth-side{\r\n    width: 85vw;\r\n    float: right;\r\n}"
 
 /***/ }),
 
 /***/ 624:
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <div class=\"form-group\">\n    <label for=\"\">\n      Calle:\n      <input type=\"text\" [(ngModel)]=\"street\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">\n      Número:\n      <input type=\"text\" [(ngModel)]=\"number\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">\n      Ciudad:\n      <input type=\"text\" [(ngModel)]=\"city\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">\n      Estado:\n      <input type=\"text\" [(ngModel)]=\"state\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">\n      Pais:\n      <input type=\"text\" [(ngModel)]=\"Country\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">\n      Código Postal:\n      <input type=\"text\" [(ngModel)]=\"code\">\n    </label>\n  </div>\n</div>\n"
+module.exports = ""
 
 /***/ }),
 
 /***/ 625:
 /***/ (function(module, exports) {
 
-module.exports = "<ul>\r\n  <li *ngFor=\"let v of testValues\">{{v}}</li>\r\n</ul>\r\n<app-contact>....</app-contact>\r\n"
+module.exports = ""
 
 /***/ }),
 
 /***/ 626:
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <div class=\"form-group\">\r\n    <label>\r\n      Nombre:\r\n      <input type=\"text\" name=\"name\" [(ngModel)]=\"name\" />\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label>\r\n      Compañia:\r\n      <input type=\"text\" name=\"company\" [(ngModel)]=\"company\" />\r\n    </label>\r\n  </div>\r\n  <app-phone></app-phone>\r\n  <app-mail></app-mail>\r\n  <app-address></app-address>\r\n</div>\r\n"
+module.exports = ""
 
 /***/ }),
 
 /***/ 627:
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n  <select [(ngModel)]=\"mailTypeId\">\r\n    <option *ngFor=\"let t of mailTypes\" value=\"t.mailTypeId\">{{t.name}}</option>\r\n  </select>\r\n  <input type=\"email\" name=\"mailAddress\" [(ngModel)]=\"mailAddress\" />\r\n</div>\n"
+module.exports = ""
 
 /***/ }),
 
 /***/ 628:
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <select [(ngModel)]=\"phoneTypeId\">\n    <option *ngFor=\"let t of phoneTypes\" value=\"t.phoneTypeId\">{{t.name}}</option>\n  </select>\n  <input type=\"text\" name=\"name\" [(ngModel)]=\"number\" />\n</div>\n"
+module.exports = "<div>\n  <div class=\"form-group\">\n    <label for=\"\">\n      Calle:\n      <input type=\"text\" [(ngModel)]=\"street\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">\n      Número:\n      <input type=\"text\" [(ngModel)]=\"number\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">\n      Ciudad:\n      <input type=\"text\" [(ngModel)]=\"city\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">\n      Estado:\n      <input type=\"text\" [(ngModel)]=\"state\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">\n      Pais:\n      <input type=\"text\" [(ngModel)]=\"Country\">\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label for=\"\">\n      Código Postal:\n      <input type=\"text\" [(ngModel)]=\"code\">\n    </label>\n  </div>\n</div>\n"
 
 /***/ }),
 
-/***/ 643:
+/***/ 629:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"left-side\">\r\n<button>Lista</button>\r\n<button>Detalle</button>\r\n</div>\r\n<div class=\"rigth-side\">\r\n    <app-contact-list></app-contact-list>\r\n        <app-contact>....</app-contact>\r\n</div>\r\n\r\n<br />"
+
+/***/ }),
+
+/***/ 630:
+/***/ (function(module, exports) {
+
+module.exports = "<ul>\n  <li *ngFor=\"let c of contacts\">{{c.name}} {{c.phones[0].number}} {{c.mails[0].mailAddress}}</li>\n</ul>\n"
+
+/***/ }),
+
+/***/ 631:
+/***/ (function(module, exports) {
+
+module.exports = "<div>\r\n  <div class=\"form-group\">\r\n    <label>\r\n      Nombre:\r\n      <input type=\"text\" name=\"name\" [(ngModel)]=\"name\" />\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label>\r\n      Compañia:\r\n      <input type=\"text\" name=\"company\" [(ngModel)]=\"company\" />\r\n    </label>\r\n  </div>\r\n  <app-phone *ngFor=\"let p of phones\" [phone]=\"p\"></app-phone>\r\n  <app-mail></app-mail>\r\n  <app-address></app-address>\r\n</div>\r\n<div>\r\n  <button>Cancelar</button>\r\n  <button type=\"button\" (click)=\"add()\">Guardar</button>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ 632:
+/***/ (function(module, exports) {
+
+module.exports = "<div>\r\n  <select [(ngModel)]=\"mailTypeId\">\r\n    <option value=\"0\">Seleccionar</option>\r\n    <option *ngFor=\"let t of mailTypes\" value=\"t.mailTypeId\">{{t.name}}</option>\r\n  </select>\r\n  <input type=\"email\" name=\"mailAddress\" [(ngModel)]=\"mailAddress\" />\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ 633:
+/***/ (function(module, exports) {
+
+module.exports = "<div>\n  <select [(ngModel)]=\"phone.phoneTypeId\">\n    <option value=\"0\">Seleccionar</option>\n    <option *ngFor=\"let t of phoneTypes\" [value]=\"t.phoneTypeId\">{{t.name}}</option>\n  </select>\n  <input type=\"text\" name=\"number\" [(ngModel)]=\"phone.number\" />\n</div>\n"
+
+/***/ }),
+
+/***/ 648:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(350);
+module.exports = __webpack_require__(351);
 
 
 /***/ })
 
-},[643]);
+},[648]);
 //# sourceMappingURL=main.bundle.map
