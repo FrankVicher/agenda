@@ -1,6 +1,6 @@
 webpackJsonp([1,4],{
 
-/***/ 308:
+/***/ 204:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -14,7 +14,38 @@ var Address = (function () {
 
 /***/ }),
 
-/***/ 309:
+/***/ 205:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Mail; });
+var Mail = (function () {
+    function Mail() {
+        this.mailTypeId = 0;
+    }
+    return Mail;
+}());
+//# sourceMappingURL=E:/Practicas/agenda/agenda/src/mail.js.map
+
+/***/ }),
+
+/***/ 206:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Phone; });
+var Phone = (function () {
+    function Phone() {
+        this.phoneTypeId = 0;
+    }
+    return Phone;
+}());
+;
+//# sourceMappingURL=E:/Practicas/agenda/agenda/src/phone.js.map
+
+/***/ }),
+
+/***/ 311:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -38,16 +69,14 @@ var ContactService = (function () {
     }
     ContactService.prototype.getContacts = function () { };
     ContactService.prototype.createContact = function (contact) {
-        //alert('ok');
-        // let contact : any = {
-        //   contactId:0,
-        //   name: 'fvm',
-        //   company:'',
-        //   phones:[],
-        //   mails:[],
-        //   addresses:[]
-        // }
         this.http.post('/api/contacts', contact).subscribe(function (r) {
+            alert(r.statusText);
+        }, function (e) {
+            alert(e.statusText);
+        });
+    };
+    ContactService.prototype.updateContact = function (contact) {
+        this.http.put("/api/contacts/" + contact.contactId, contact).subscribe(function (r) {
             alert(r.statusText);
         }, function (e) {
             alert(e.statusText);
@@ -64,38 +93,33 @@ var ContactService = (function () {
 
 /***/ }),
 
-/***/ 310:
+/***/ 312:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Mail; });
-var Mail = (function () {
-    function Mail() {
-        this.mailTypeId = 0;
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__phone__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__mail__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__address__ = __webpack_require__(204);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Contact; });
+
+
+
+var Contact = (function () {
+    function Contact() {
+        this.contactId = 0;
+        this.name = '';
+        this.company = '';
+        this.phones = [new __WEBPACK_IMPORTED_MODULE_0__phone__["a" /* Phone */]()];
+        this.mails = [new __WEBPACK_IMPORTED_MODULE_1__mail__["a" /* Mail */]()];
+        this.addresses = [new __WEBPACK_IMPORTED_MODULE_2__address__["a" /* Address */]()];
     }
-    return Mail;
+    return Contact;
 }());
-//# sourceMappingURL=E:/Practicas/agenda/agenda/src/mail.js.map
+//# sourceMappingURL=E:/Practicas/agenda/agenda/src/contact.js.map
 
 /***/ }),
 
-/***/ 311:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Phone; });
-var Phone = (function () {
-    function Phone() {
-        this.phoneTypeId = 0;
-    }
-    return Phone;
-}());
-;
-//# sourceMappingURL=E:/Practicas/agenda/agenda/src/phone.js.map
-
-/***/ }),
-
-/***/ 354:
+/***/ 355:
 /***/ (function(module, exports) {
 
 function webpackEmptyContext(req) {
@@ -104,20 +128,20 @@ function webpackEmptyContext(req) {
 webpackEmptyContext.keys = function() { return []; };
 webpackEmptyContext.resolve = webpackEmptyContext;
 module.exports = webpackEmptyContext;
-webpackEmptyContext.id = 354;
+webpackEmptyContext.id = 355;
 
 
 /***/ }),
 
-/***/ 355:
+/***/ 356:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(443);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(444);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(471);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(465);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(466);
 
 
 
@@ -130,12 +154,12 @@ __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dyna
 
 /***/ }),
 
-/***/ 463:
+/***/ 464:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__address__ = __webpack_require__(308);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__address__ = __webpack_require__(204);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddressComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -181,12 +205,13 @@ var AddressComponent = (function () {
 
 /***/ }),
 
-/***/ 464:
+/***/ 465:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__contact__ = __webpack_require__(312);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -199,6 +224,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var AppComponent = (function () {
     function AppComponent(_service) {
         this._service = _service;
@@ -206,6 +232,10 @@ var AppComponent = (function () {
     }
     AppComponent.prototype.onContactChanged = function (contact) {
         this.workingContact = contact;
+        this.mode = 'edit';
+    };
+    AppComponent.prototype.editMode = function () {
+        this.workingContact = new __WEBPACK_IMPORTED_MODULE_2__contact__["a" /* Contact */]();
         this.mode = 'edit';
     };
     AppComponent.prototype.ngOnInit = function () {
@@ -225,21 +255,21 @@ var AppComponent = (function () {
 
 /***/ }),
 
-/***/ 465:
+/***/ 466:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(196);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(434);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(435);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(464);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(465);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__contact_contact_component__ = __webpack_require__(468);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__phone_phone_component__ = __webpack_require__(470);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__mail_mail_component__ = __webpack_require__(469);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__address_address_component__ = __webpack_require__(463);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__contact_list_contact_list_component__ = __webpack_require__(466);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__contact_service__ = __webpack_require__(309);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__address_address_component__ = __webpack_require__(464);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__contact_list_contact_list_component__ = __webpack_require__(467);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__contact_service__ = __webpack_require__(311);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -291,13 +321,13 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 466:
+/***/ 467:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_src_facade_async__ = __webpack_require__(366);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_src_facade_async__ = __webpack_require__(367);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactListComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -345,30 +375,16 @@ var ContactListComponent = (function () {
 
 /***/ }),
 
-/***/ 467:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Contact; });
-var Contact = (function () {
-    function Contact() {
-    }
-    return Contact;
-}());
-//# sourceMappingURL=E:/Practicas/agenda/agenda/src/contact.js.map
-
-/***/ }),
-
 /***/ 468:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__contact_service__ = __webpack_require__(309);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__phone__ = __webpack_require__(311);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mail__ = __webpack_require__(310);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__address__ = __webpack_require__(308);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_app_contact__ = __webpack_require__(467);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__contact_service__ = __webpack_require__(311);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__phone__ = __webpack_require__(206);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mail__ = __webpack_require__(205);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__address__ = __webpack_require__(204);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_app_contact__ = __webpack_require__(312);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -390,10 +406,15 @@ var ContactComponent = (function () {
         this.contactService = contactService;
         this.contact = new __WEBPACK_IMPORTED_MODULE_5_app_contact__["a" /* Contact */]();
     }
-    ContactComponent.prototype.ngOnInit = function () {
-    };
+    ContactComponent.prototype.ngOnInit = function () { };
     ContactComponent.prototype.add = function () {
-        this.contactService.createContact(this.contact);
+        console.log(this.contact);
+        if (this.contact.contactId === 0) {
+            this.contactService.createContact(this.contact);
+        }
+        else {
+            this.contactService.updateContact(this.contact);
+        }
     };
     ContactComponent.prototype.addPhone = function () {
         this.contact.phones.push(new __WEBPACK_IMPORTED_MODULE_2__phone__["a" /* Phone */]());
@@ -429,7 +450,7 @@ var ContactComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mail__ = __webpack_require__(310);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__mail__ = __webpack_require__(205);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MailComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -484,7 +505,7 @@ var MailComponent = (function () {
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__phone__ = __webpack_require__(311);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__phone__ = __webpack_require__(206);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PhoneComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -601,7 +622,7 @@ module.exports = "<div class=\"row\">\n\n  <div class=\"col-1 bg-info\"><i class
 /***/ 638:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\n  <div class=\"left-side col-2 bg-dark vh-100\">\n    <ul class=\"list-group\">\n      <li class=\"list-group-item\">\n        <button type=\"button\" class=\"btn btn-xs btn-default\" (click)=\"mode='list'\">Lista</button>\n      </li>\n      <li class=\"list-group-item\">\n        <button type=\"button\" class=\"btn btn-xs btn-default\" (click)=\"mode='edit'\">Detalle</button>\n      </li>\n    </ul>\n  </div>\n  <div class=\"rigth-side col-10\">\n    <app-contact-list *ngIf=\"mode=='list'\"  (selectedContact)=\"onContactChanged($event)\"></app-contact-list>\n    <app-contact *ngIf=\"mode=='edit'\" [(contact)]=\"workingContact\" >....</app-contact>\n  </div>\n\n  <br />\n</div>\n"
+module.exports = "<div class=\"container\">\n  <div class=\"left-side col-2 bg-dark vh-100\">\n    <ul class=\"list-group\">\n      <li class=\"list-group-item\">\n        <button type=\"button\" class=\"btn btn-xs btn-default\" (click)=\"mode='list'\">Lista</button>\n      </li>\n      <li class=\"list-group-item\">\n        <button type=\"button\" class=\"btn btn-xs btn-default\" (click)=\"editMode()\">Detalle</button>\n      </li>\n    </ul>\n  </div>\n  <div class=\"rigth-side col-10\">\n    <app-contact-list *ngIf=\"mode=='list'\"  (selectedContact)=\"onContactChanged($event)\"></app-contact-list>\n    <app-contact *ngIf=\"mode=='edit'\" [(contact)]=\"workingContact\" >....</app-contact>\n  </div>\n\n  <br />\n</div>\n"
 
 /***/ }),
 
@@ -615,7 +636,7 @@ module.exports = "<table class=\"table table-striped table-hover\">\n  <tr *ngFo
 /***/ 640:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"form-horizontal\">\n  <div class=\"form-group\">\n    <label class=\"label contol-label col-12\">\n      Nombre:\n      <input type=\"text\" name=\"name\" [(ngModel)]=\"contact.name\" class=\"form-control\" />\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label class=\"label contol-label col-12\">\n      Compañia:\n      <input type=\"text\" name=\"company\" [(ngModel)]=\"contact.company\" class=\"form-control\" />\n    </label>\n  </div>\n  <div class=\"row\" style=\"margin: 0\">\n    <div class=\"col-11\">\n      <div *ngFor=\"let p of contact.phones; let i = index\" class=\"form-group row\" style=\"margin: .5rem 0\">\n        <div class=\"col-11\">\n          <app-phone [phone]=\"p\"></app-phone>\n        </div>\n        <div class=\"col-1\">\n          <button type=\"button\" *ngIf=\"contact.phones.length>1\" (click)=\"phones.splice(i,1)\" class=\"btn btn-danger\"><i\n              class=\"fa fa-minus\"></i></button>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-1\" style=\"position: relative; bottom: 0;vertical-align: bottom;\">\n      <button type=\"button\" (click)=\"addPhone()\" class=\"btn btn-primary\"><i class=\"fa fa-plus\"></i></button>\n    </div>\n  </div>\n\n  <div class=\"row\" style=\"margin: 0\">\n    <div class=\"col-11\">\n      <div *ngFor=\"let m of contact.mails; let i = index\" class=\"form-group row\" style=\"margin: .5rem 0\">\n        <div class=\"col-11\">\n          <app-mail [mail]=\"m\"></app-mail>\n        </div>\n        <div class=\"col-1\">\n          <button type=\"button\" *ngIf=\"contact.mails.length>1\" (click)=\"mails.splice(i,1)\" class=\"btn btn-danger\"><i\n              class=\"fa fa-minus\"></i></button>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-1\">\n      <button type=\"button\" (click)=\"addMail()\" class=\"btn btn-primary\"><i class=\"fa fa-plus\"></i></button>\n    </div>\n  </div>\n  <div class=\"row\" style=\"margin: 0\">\n    <div class=\"col-11\">\n      <div *ngFor=\"let a of contact.addresses; let i = index\" class=\"form-group row\" style=\"margin: .5rem 0\">\n        <div class=\"col-11\">\n          <app-address [address]=\"a\"></app-address>\n        </div>\n        <div class=\"col-1\">\n          <button type=\"button\" *ngIf=\"contact.addresses.length>1\" (click)=\"addresses.splice(i,1)\" class=\"btn btn-danger\"><i\n              class=\"fa fa-minus\"></i></button>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-1\">\n      <button type=\"button\" (click)=\"addAddress()\" class=\"btn btn-primary\"><i class=\"fa fa-plus\"></i></button>\n    </div>\n  </div>\n</div>\n<div class=\"text-right\">\n  <button>Cancelar</button>\n  <button type=\"button\" (click)=\"add()\">Guardar</button>\n</div>\n"
+module.exports = "<div class=\"form-horizontal\">\n  <div class=\"form-group\">\n    <label class=\"label contol-label col-12\">\n      Nombre:\n      <input type=\"text\" name=\"name\" [(ngModel)]=\"contact.name\" class=\"form-control\" />\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label class=\"label contol-label col-12\">\n      Compañia:\n      <input type=\"text\" name=\"company\" [(ngModel)]=\"contact.company\" class=\"form-control\" />\n    </label>\n  </div>\n  <div class=\"row\" style=\"margin: 0\">\n    <div class=\"col-11\">\n      <div *ngFor=\"let p of contact.phones; let i = index\" class=\"form-group row\" style=\"margin: .5rem 0\">\n        <div class=\"col-11\">\n          <app-phone [phone]=\"p\"></app-phone>\n        </div>\n        <div class=\"col-1\">\n          <button type=\"button\" *ngIf=\"contact.phones.length>1\" (click)=\"contact.phones.splice(i,1)\" class=\"btn btn-danger\"><i\n              class=\"fa fa-minus\"></i></button>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-1\" style=\"position: relative; bottom: 0;vertical-align: bottom;\">\n      <button type=\"button\" (click)=\"addPhone()\" class=\"btn btn-primary\"><i class=\"fa fa-plus\"></i></button>\n    </div>\n  </div>\n\n  <div class=\"row\" style=\"margin: 0\">\n    <div class=\"col-11\">\n      <div *ngFor=\"let m of contact.mails; let i = index\" class=\"form-group row\" style=\"margin: .5rem 0\">\n        <div class=\"col-11\">\n          <app-mail [mail]=\"m\"></app-mail>\n        </div>\n        <div class=\"col-1\">\n          <button type=\"button\" *ngIf=\"contact.mails.length>1\" (click)=\"contact.mails.splice(i,1)\" class=\"btn btn-danger\"><i\n              class=\"fa fa-minus\"></i></button>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-1\">\n      <button type=\"button\" (click)=\"addMail()\" class=\"btn btn-primary\"><i class=\"fa fa-plus\"></i></button>\n    </div>\n  </div>\n  <div class=\"row\" style=\"margin: 0\">\n    <div class=\"col-11\">\n      <div *ngFor=\"let a of contact.addresses; let i = index\" class=\"form-group row\" style=\"margin: .5rem 0\">\n        <div class=\"col-11\">\n          <app-address [address]=\"a\"></app-address>\n        </div>\n        <div class=\"col-1\">\n          <button type=\"button\" *ngIf=\"contact.addresses.length>1\" (click)=\"contact.addresses.splice(i,1)\" class=\"btn btn-danger\"><i\n              class=\"fa fa-minus\"></i></button>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-1\">\n      <button type=\"button\" (click)=\"addAddress()\" class=\"btn btn-primary\"><i class=\"fa fa-plus\"></i></button>\n    </div>\n  </div>\n</div>\n<div class=\"text-right\">\n  <button>Cancelar</button>\n  <button type=\"button\" (click)=\"add()\">Guardar</button>\n</div>\n"
 
 /***/ }),
 
@@ -636,7 +657,7 @@ module.exports = "<div class=\"row\">\n  <span class=\"col-1 bg-info\"><i class=
 /***/ 660:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(355);
+module.exports = __webpack_require__(356);
 
 
 /***/ })

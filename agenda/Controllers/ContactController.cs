@@ -58,5 +58,18 @@ namespace agenda.Controllers
       }
       return "Operación exitosa";
     }
+
+    [HttpPut("/api/contacts/{id}")]
+    public async Task Put(ContactModel model, int id)
+    {
+      await contactRepository.UpdateAsync(new Contact
+      {
+        Addresses = model.Addresses,
+        Company = model.Company,
+        Mails = model.Mails,
+        Name = model.Name,
+        Phones = model.Phones
+      }, id);
+    }
   }
 }

@@ -18,7 +18,7 @@
           <app-phone [phone]="p"></app-phone>
         </div>
         <div class="col-1">
-          <button type="button" *ngIf="contact.phones.length>1" (click)="phones.splice(i,1)" class="btn btn-danger"><i
+          <button type="button" *ngIf="contact.phones.length>1" (click)="contact.phones.splice(i,1)" class="btn btn-danger"><i
               class="fa fa-minus"></i></button>
         </div>
       </div>
@@ -35,7 +35,7 @@
           <app-mail [mail]="m"></app-mail>
         </div>
         <div class="col-1">
-          <button type="button" *ngIf="contact.mails.length>1" (click)="mails.splice(i,1)" class="btn btn-danger"><i
+          <button type="button" *ngIf="contact.mails.length>1" (click)="contact.mails.splice(i,1)" class="btn btn-danger"><i
               class="fa fa-minus"></i></button>
         </div>
       </div>
@@ -51,7 +51,7 @@
           <app-address [address]="a"></app-address>
         </div>
         <div class="col-1">
-          <button type="button" *ngIf="contact.addresses.length>1" (click)="addresses.splice(i,1)" class="btn btn-danger"><i
+          <button type="button" *ngIf="contact.addresses.length>1" (click)="contact.addresses.splice(i,1)" class="btn btn-danger"><i
               class="fa fa-minus"></i></button>
         </div>
       </div>
