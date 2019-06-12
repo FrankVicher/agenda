@@ -3,6 +3,7 @@ using agenda.Data.Entities;
 using agenda.Data.Repositories;
 using agenda.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +27,11 @@ namespace agenda.Controllers
     [HttpGet("/api/contacts")]
     public IEnumerable<Contact> Get()
     {
-      return context.Set<Contact>().ToList();
+      return context.Set<Contact>()
+        .Include(c => c.Phones)
+        .Include(c => c.Mails)
+        .Include(c => c.Addresses)
+        .ToList();
     }
 
     [HttpPost("/api/contacts")]

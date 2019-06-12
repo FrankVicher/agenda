@@ -1,10 +1,18 @@
-<div class="left-side">
-<button>Lista</button>
-<button>Detalle</button>
-</div>
-<div class="rigth-side">
-    <app-contact-list></app-contact-list>
-        <app-contact>....</app-contact>
-</div>
+<div class="container">
+  <div class="left-side col-2 bg-dark vh-100">
+    <ul class="list-group">
+      <li class="list-group-item">
+        <button type="button" class="btn btn-xs btn-default" (click)="mode='list'">Lista</button>
+      </li>
+      <li class="list-group-item">
+        <button type="button" class="btn btn-xs btn-default" (click)="mode='edit'">Detalle</button>
+      </li>
+    </ul>
+  </div>
+  <div class="rigth-side col-10">
+    <app-contact-list *ngIf="mode=='list'"></app-contact-list>
+    <app-contact *ngIf="mode=='edit'">....</app-contact>
+  </div>
 
-<br />
+  <br />
+</div>

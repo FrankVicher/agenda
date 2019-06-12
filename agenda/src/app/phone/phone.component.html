@@ -1,7 +1,8 @@
-<div>
-  <select [(ngModel)]="phone.phoneTypeId">
+<div class="row">
+  <span class="col-1 bg-info"><i class="fa fa-phone fa-2x"></i></span>
+  <select [(ngModel)]="phone.phoneTypeId" class="form-control col-3">
     <option value="0">Seleccionar</option>
     <option *ngFor="let t of phoneTypes" [value]="t.phoneTypeId">{{t.name}}</option>
   </select>
-  <input type="text" name="number" [(ngModel)]="phone.number" />
+  <input type="text" name="number" [(ngModel)]="phone.number" class="form-control col-8" />
 </div>

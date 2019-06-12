@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ContactService } from '../contact.service';
-import {PhoneComponent} from '../phone/phone.component';
-import {Phone} from '../phone';
+import { PhoneComponent } from '../phone/phone.component';
+import{MailComponent} from '../mail/mail.component';
+import { Phone } from '../phone';
+import { Mail } from '../mail'
+import {Address} from '../address'
 
 @Component({
   selector: 'app-contact',
@@ -14,12 +17,17 @@ export class ContactComponent implements OnInit {
   contactId: number = 0;
   name: string = '';
   company: string = '';
-  phones: Phone[] = [{phoneId:0,
+  phones: Phone[] = [{
+    phoneId: 0,
     phoneTypeId: 0,
-    number:''
+    number: ''
   }];
-  mails: {}[] = [];
-  addresses: {}[] = [];
+  mails: Mail[] = [{
+    mailAddress: '',
+    mailId: 0,
+    mailTypeId: 0
+  }];
+  addresses: Address[]=[new Address()]
 
   ngOnInit() {
   }
@@ -35,6 +43,15 @@ export class ContactComponent implements OnInit {
     }
     this.contactService.createContact(contact);
 
+  }
+  addPhone(){
+    this.phones.push(new Phone())
+  }
+  addMail(){
+    this.mails.push(new Mail())
+  }
+  addAddress(){
+    this.addresses.push(new Address())
   }
 
 }

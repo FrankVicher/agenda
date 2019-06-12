@@ -1,3 +1,8 @@
-<ul>
-  <li *ngFor="let c of contacts">{{c.name}} {{c.phones[0].number}} {{c.mails[0].mailAddress}}</li>
-</ul>
+<table class="table table-striped table-hover">
+  <tr *ngFor="let c of contacts">
+    <td>{{c.name}} </td>
+    <td>{{c.phones[0].number}}</td>
+    <td><span *ngIf="c.mails.length>0">{{c.mails[0].mailAddress}}</span></td>
+  </tr>
+  
+</table>

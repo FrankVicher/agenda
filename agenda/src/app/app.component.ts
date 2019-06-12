@@ -7,7 +7,8 @@ import { Http } from '@angular/http';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  testValues: string[] = [];
+
+  mode:string = 'list'
   constructor(private _service: Http) {
 
   }

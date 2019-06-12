@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, Input } from '@angular/core';
+import{Address} from '../address';
 @Component({
   selector: 'app-address',
   templateUrl: './address.component.html',
@@ -8,13 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class AddressComponent implements OnInit {
 
   constructor() { }
-  addressId: number = 0;
-  street: string = '';
-  number: string = '';
-  city: string = '';
-  state: string = '';
-  country: string = '';
-  code: string = '';
+  @Input() address: Address = {
+  addressId: 0,
+  street:'',
+  number: '',
+  city: '',
+  state: '',
+  country: '',
+  code: ''
+  }
 
   ngOnInit() {
   }

@@ -18,11 +18,8 @@ export class PhoneComponent implements OnInit {
 
   phoneTypes: {}[] = [];
   ngOnInit() {
-
     this._service.get('/api/phonetypes').subscribe(r => {
       this.phoneTypes = r.json();
     });
-
   }
-
 }

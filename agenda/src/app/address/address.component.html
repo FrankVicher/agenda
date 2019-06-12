@@ -1,38 +1,43 @@
-<div>
-  <div class="form-group">
-    <label for="">
-      Calle:
-      <input type="text" [(ngModel)]="street">
-    </label>
-  </div>
-  <div class="form-group">
-    <label for="">
-      Número:
-      <input type="text" [(ngModel)]="number">
-    </label>
-  </div>
-  <div class="form-group">
-    <label for="">
-      Ciudad:
-      <input type="text" [(ngModel)]="city">
-    </label>
-  </div>
-  <div class="form-group">
-    <label for="">
-      Estado:
-      <input type="text" [(ngModel)]="state">
-    </label>
-  </div>
-  <div class="form-group">
-    <label for="">
-      Pais:
-      <input type="text" [(ngModel)]="Country">
-    </label>
-  </div>
-  <div class="form-group">
-    <label for="">
-      Código Postal:
-      <input type="text" [(ngModel)]="code">
-    </label>
+<div class="row">
+
+  <div class="col-1 bg-info"><i class="fa fa-home fa-2x"></i></div>
+
+  <div class="col-11">
+    <div class="form-group">
+      <label class="label contol-label col-12">
+        Calle:
+        <input type="text" [(ngModel)]="address.street" class="form-control">
+      </label>
+    </div>
+    <div class="form-group">
+      <label class="label contol-label col-12">
+        Número:
+        <input type="text" [(ngModel)]="address.number" class="form-control">
+      </label>
+    </div>
+    <div class="form-group">
+      <label class="label contol-label col-12">
+        Ciudad:
+        <input type="text" [(ngModel)]="address.city" class="form-control">
+      </label>
+    </div>
+    <div class="form-group">
+      <label class="label contol-label col-12">
+        Estado:
+        <input type="text" [(ngModel)]="address.state" class="form-control">
+      </label>
+    </div>
+    <div class="form-group">
+      <label class="label contol-label col-12">
+        Pais:
+        <input type="text" [(ngModel)]="address.Country" class="form-control">
+      </label>
+    </div>
+    <div class="form-group">
+      <label class="label contol-label col-12">
+        Código Postal:
+        <input type="text" [(ngModel)]="address.code" class="form-control">
+      </label>
+    </div>
   </div>
 </div>

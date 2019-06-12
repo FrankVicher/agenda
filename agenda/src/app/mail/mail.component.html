@@ -1,7 +1,8 @@
-<div>
-  <select [(ngModel)]="mailTypeId">
+<div class="row">
+  <span class="col-1 bg-info"><i class="fa fa-envelope-o fa-2x"></i></span>
+  <select [(ngModel)]="mail.mailTypeId" class="form-control col-3">
     <option value="0">Seleccionar</option>
-    <option *ngFor="let t of mailTypes" value="t.mailTypeId">{{t.name}}</option>
+    <option *ngFor="let t of mailTypes" [value]="t.mailTypeId">{{t.name}}</option>
   </select>
-  <input type="email" name="mailAddress" [(ngModel)]="mailAddress" />
+  <input type="email" name="mailAddress" [(ngModel)]="mail.mailAddress" class="form-control col-8" />
 </div>
