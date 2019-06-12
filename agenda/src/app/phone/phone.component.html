@@ -4,5 +4,5 @@
     <option value="0">Seleccionar</option>
     <option *ngFor="let t of phoneTypes" [value]="t.phoneTypeId">{{t.name}}</option>
   </select>
-  <input type="text" name="number" [(ngModel)]="phone.number" class="form-control col-8" />
+  <input type="phone" name="number" [(ngModel)]="phone.number" class="form-control col-8" maxlength="15" />
 </div>

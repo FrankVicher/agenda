@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Http } from '@angular/http';
+import { Contact } from './contact';
 
 @Component({
   selector: 'app-root',
@@ -9,10 +10,14 @@ import { Http } from '@angular/http';
 export class AppComponent implements OnInit {
 
   mode:string = 'list'
+  workingContact: Contact
   constructor(private _service: Http) {
 
   }
-  
+  onContactChanged(contact: Contact){
+    this.workingContact=contact
+    this.mode='edit'    
+  }
   ngOnInit() {
     
   }

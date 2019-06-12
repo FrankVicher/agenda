@@ -2,23 +2,23 @@
   <div class="form-group">
     <label class="label contol-label col-12">
       Nombre:
-      <input type="text" name="name" [(ngModel)]="name" class="form-control" />
+      <input type="text" name="name" [(ngModel)]="contact.name" class="form-control" />
     </label>
   </div>
   <div class="form-group">
     <label class="label contol-label col-12">
       Compañia:
-      <input type="text" name="company" [(ngModel)]="company" class="form-control" />
+      <input type="text" name="company" [(ngModel)]="contact.company" class="form-control" />
     </label>
   </div>
   <div class="row" style="margin: 0">
     <div class="col-11">
-      <div *ngFor="let p of phones; let i = index" class="form-group row" style="margin: .5rem 0">
+      <div *ngFor="let p of contact.phones; let i = index" class="form-group row" style="margin: .5rem 0">
         <div class="col-11">
           <app-phone [phone]="p"></app-phone>
         </div>
         <div class="col-1">
-          <button type="button" *ngIf="phones.length>1" (click)="phones.splice(i,1)" class="btn btn-danger"><i
+          <button type="button" *ngIf="contact.phones.length>1" (click)="phones.splice(i,1)" class="btn btn-danger"><i
               class="fa fa-minus"></i></button>
         </div>
       </div>
@@ -30,12 +30,12 @@
 
   <div class="row" style="margin: 0">
     <div class="col-11">
-      <div *ngFor="let m of mails; let i = index" class="form-group row" style="margin: .5rem 0">
+      <div *ngFor="let m of contact.mails; let i = index" class="form-group row" style="margin: .5rem 0">
         <div class="col-11">
           <app-mail [mail]="m"></app-mail>
         </div>
         <div class="col-1">
-          <button type="button" *ngIf="mails.length>1" (click)="mails.splice(i,1)" class="btn btn-danger"><i
+          <button type="button" *ngIf="contact.mails.length>1" (click)="mails.splice(i,1)" class="btn btn-danger"><i
               class="fa fa-minus"></i></button>
         </div>
       </div>
@@ -46,12 +46,12 @@
   </div>
   <div class="row" style="margin: 0">
     <div class="col-11">
-      <div *ngFor="let a of addresses; let i = index" class="form-group row" style="margin: .5rem 0">
+      <div *ngFor="let a of contact.addresses; let i = index" class="form-group row" style="margin: .5rem 0">
         <div class="col-11">
           <app-address [address]="a"></app-address>
         </div>
         <div class="col-1">
-          <button type="button" *ngIf="addresses.length>1" (click)="addresses.splice(i,1)" class="btn btn-danger"><i
+          <button type="button" *ngIf="contact.addresses.length>1" (click)="addresses.splice(i,1)" class="btn btn-danger"><i
               class="fa fa-minus"></i></button>
         </div>
       </div>

@@ -10,8 +10,8 @@
     </ul>
   </div>
   <div class="rigth-side col-10">
-    <app-contact-list *ngIf="mode=='list'"></app-contact-list>
-    <app-contact *ngIf="mode=='edit'">....</app-contact>
+    <app-contact-list *ngIf="mode=='list'"  (selectedContact)="onContactChanged($event)"></app-contact-list>
+    <app-contact *ngIf="mode=='edit'" [(contact)]="workingContact" >....</app-contact>
   </div>
 
   <br />

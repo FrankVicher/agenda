@@ -10,7 +10,7 @@ var Address = (function () {
     }
     return Address;
 }());
-//# sourceMappingURL=D:/Poyectos/agenda/agenda/agenda/src/address.js.map
+//# sourceMappingURL=E:/Practicas/agenda/agenda/src/address.js.map
 
 /***/ }),
 
@@ -60,7 +60,7 @@ var ContactService = (function () {
     return ContactService;
     var _a;
 }());
-//# sourceMappingURL=D:/Poyectos/agenda/agenda/agenda/src/contact.service.js.map
+//# sourceMappingURL=E:/Practicas/agenda/agenda/src/contact.service.js.map
 
 /***/ }),
 
@@ -75,7 +75,7 @@ var Mail = (function () {
     }
     return Mail;
 }());
-//# sourceMappingURL=D:/Poyectos/agenda/agenda/agenda/src/mail.js.map
+//# sourceMappingURL=E:/Practicas/agenda/agenda/src/mail.js.map
 
 /***/ }),
 
@@ -91,7 +91,7 @@ var Phone = (function () {
     return Phone;
 }());
 ;
-//# sourceMappingURL=D:/Poyectos/agenda/agenda/agenda/src/phone.js.map
+//# sourceMappingURL=E:/Practicas/agenda/agenda/src/phone.js.map
 
 /***/ }),
 
@@ -114,10 +114,10 @@ webpackEmptyContext.id = 354;
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(442);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(443);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(469);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(464);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__environments_environment__ = __webpack_require__(471);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_app_module__ = __webpack_require__(465);
 
 
 
@@ -126,11 +126,11 @@ if (__WEBPACK_IMPORTED_MODULE_2__environments_environment__["a" /* environment *
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1__angular_core__["a" /* enableProdMode */])();
 }
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_3__app_app_module__["a" /* AppModule */]);
-//# sourceMappingURL=D:/Poyectos/agenda/agenda/agenda/src/main.js.map
+//# sourceMappingURL=E:/Practicas/agenda/agenda/src/main.js.map
 
 /***/ }),
 
-/***/ 462:
+/***/ 463:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -169,19 +169,19 @@ var AddressComponent = (function () {
     AddressComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
             selector: 'app-address',
-            template: __webpack_require__(635),
-            styles: [__webpack_require__(629)]
+            template: __webpack_require__(637),
+            styles: [__webpack_require__(631)]
         }), 
         __metadata('design:paramtypes', [])
     ], AddressComponent);
     return AddressComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/Poyectos/agenda/agenda/agenda/src/address.component.js.map
+//# sourceMappingURL=E:/Practicas/agenda/agenda/src/address.component.js.map
 
 /***/ }),
 
-/***/ 463:
+/***/ 464:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -204,37 +204,41 @@ var AppComponent = (function () {
         this._service = _service;
         this.mode = 'list';
     }
+    AppComponent.prototype.onContactChanged = function (contact) {
+        this.workingContact = contact;
+        this.mode = 'edit';
+    };
     AppComponent.prototype.ngOnInit = function () {
     };
     AppComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
             selector: 'app-root',
-            template: __webpack_require__(636),
-            styles: [__webpack_require__(630)]
+            template: __webpack_require__(638),
+            styles: [__webpack_require__(632)]
         }), 
         __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object])
     ], AppComponent);
     return AppComponent;
     var _a;
 }());
-//# sourceMappingURL=D:/Poyectos/agenda/agenda/agenda/src/app.component.js.map
+//# sourceMappingURL=E:/Practicas/agenda/agenda/src/app.component.js.map
 
 /***/ }),
 
-/***/ 464:
+/***/ 465:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(196);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(433);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_forms__ = __webpack_require__(434);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_http__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(463);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__contact_contact_component__ = __webpack_require__(466);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__phone_phone_component__ = __webpack_require__(468);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__mail_mail_component__ = __webpack_require__(467);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__address_address_component__ = __webpack_require__(462);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__contact_list_contact_list_component__ = __webpack_require__(465);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__app_component__ = __webpack_require__(464);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__contact_contact_component__ = __webpack_require__(468);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__phone_phone_component__ = __webpack_require__(470);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__mail_mail_component__ = __webpack_require__(469);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__address_address_component__ = __webpack_require__(463);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__contact_list_contact_list_component__ = __webpack_require__(466);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__contact_service__ = __webpack_require__(309);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -283,16 +287,17 @@ var AppModule = (function () {
     ], AppModule);
     return AppModule;
 }());
-//# sourceMappingURL=D:/Poyectos/agenda/agenda/agenda/src/app.module.js.map
+//# sourceMappingURL=E:/Practicas/agenda/agenda/src/app.module.js.map
 
 /***/ }),
 
-/***/ 465:
+/***/ 466:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_common_src_facade_async__ = __webpack_require__(366);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactListComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -305,33 +310,56 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
+
 var ContactListComponent = (function () {
     function ContactListComponent(_service) {
         this._service = _service;
+        this.selectedContact = new __WEBPACK_IMPORTED_MODULE_2__angular_common_src_facade_async__["a" /* EventEmitter */]();
         this.contacts = [];
     }
+    ContactListComponent.prototype.onSelectContact = function (contact) {
+        this.selectedContact.emit(contact);
+    };
     ContactListComponent.prototype.ngOnInit = function () {
         var _this = this;
         this._service.get('/api/contacts').subscribe(function (r) {
             _this.contacts = r.json();
         });
     };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["T" /* Output */])(), 
+        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2__angular_common_src_facade_async__["a" /* EventEmitter */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_2__angular_common_src_facade_async__["a" /* EventEmitter */]) === 'function' && _a) || Object)
+    ], ContactListComponent.prototype, "selectedContact", void 0);
     ContactListComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
             selector: 'app-contact-list',
-            template: __webpack_require__(637),
-            styles: [__webpack_require__(631)]
+            template: __webpack_require__(639),
+            styles: [__webpack_require__(633)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _a) || Object])
+        __metadata('design:paramtypes', [(typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _b) || Object])
     ], ContactListComponent);
     return ContactListComponent;
-    var _a;
+    var _a, _b;
 }());
-//# sourceMappingURL=D:/Poyectos/agenda/agenda/agenda/src/contact-list.component.js.map
+//# sourceMappingURL=E:/Practicas/agenda/agenda/src/contact-list.component.js.map
 
 /***/ }),
 
-/***/ 466:
+/***/ 467:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Contact; });
+var Contact = (function () {
+    function Contact() {
+    }
+    return Contact;
+}());
+//# sourceMappingURL=E:/Practicas/agenda/agenda/src/contact.js.map
+
+/***/ }),
+
+/***/ 468:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -340,6 +368,7 @@ var ContactListComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__phone__ = __webpack_require__(311);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__mail__ = __webpack_require__(310);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__address__ = __webpack_require__(308);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_app_contact__ = __webpack_require__(467);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ContactComponent; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -355,62 +384,46 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ContactComponent = (function () {
     function ContactComponent(contactService) {
         this.contactService = contactService;
-        this.contactId = 0;
-        this.name = '';
-        this.company = '';
-        this.phones = [{
-                phoneId: 0,
-                phoneTypeId: 0,
-                number: ''
-            }];
-        this.mails = [{
-                mailAddress: '',
-                mailId: 0,
-                mailTypeId: 0
-            }];
-        this.addresses = [new __WEBPACK_IMPORTED_MODULE_4__address__["a" /* Address */]()];
+        this.contact = new __WEBPACK_IMPORTED_MODULE_5_app_contact__["a" /* Contact */]();
     }
     ContactComponent.prototype.ngOnInit = function () {
     };
     ContactComponent.prototype.add = function () {
-        //alert('go');
-        var contact = {
-            name: this.name,
-            company: this.company,
-            phones: this.phones,
-            mails: this.mails,
-            addresses: this.addresses
-        };
-        this.contactService.createContact(contact);
+        this.contactService.createContact(this.contact);
     };
     ContactComponent.prototype.addPhone = function () {
-        this.phones.push(new __WEBPACK_IMPORTED_MODULE_2__phone__["a" /* Phone */]());
+        this.contact.phones.push(new __WEBPACK_IMPORTED_MODULE_2__phone__["a" /* Phone */]());
     };
     ContactComponent.prototype.addMail = function () {
-        this.mails.push(new __WEBPACK_IMPORTED_MODULE_3__mail__["a" /* Mail */]());
+        this.contact.mails.push(new __WEBPACK_IMPORTED_MODULE_3__mail__["a" /* Mail */]());
     };
     ContactComponent.prototype.addAddress = function () {
-        this.addresses.push(new __WEBPACK_IMPORTED_MODULE_4__address__["a" /* Address */]());
+        this.contact.addresses.push(new __WEBPACK_IMPORTED_MODULE_4__address__["a" /* Address */]());
     };
+    __decorate([
+        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["w" /* Input */])(), 
+        __metadata('design:type', (typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_5_app_contact__["a" /* Contact */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_5_app_contact__["a" /* Contact */]) === 'function' && _a) || Object)
+    ], ContactComponent.prototype, "contact", void 0);
     ContactComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
             selector: 'app-contact',
-            template: __webpack_require__(638),
-            styles: [__webpack_require__(632)]
+            template: __webpack_require__(640),
+            styles: [__webpack_require__(634)]
         }), 
-        __metadata('design:paramtypes', [(typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1__contact_service__["a" /* ContactService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__contact_service__["a" /* ContactService */]) === 'function' && _a) || Object])
+        __metadata('design:paramtypes', [(typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__contact_service__["a" /* ContactService */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__contact_service__["a" /* ContactService */]) === 'function' && _b) || Object])
     ], ContactComponent);
     return ContactComponent;
-    var _a;
+    var _a, _b;
 }());
-//# sourceMappingURL=D:/Poyectos/agenda/agenda/agenda/src/contact.component.js.map
+//# sourceMappingURL=E:/Practicas/agenda/agenda/src/contact.component.js.map
 
 /***/ }),
 
-/***/ 467:
+/***/ 469:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -453,19 +466,19 @@ var MailComponent = (function () {
     MailComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
             selector: 'app-mail',
-            template: __webpack_require__(639),
-            styles: [__webpack_require__(633)]
+            template: __webpack_require__(641),
+            styles: [__webpack_require__(635)]
         }), 
         __metadata('design:paramtypes', [(typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _b) || Object])
     ], MailComponent);
     return MailComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=D:/Poyectos/agenda/agenda/agenda/src/mail.component.js.map
+//# sourceMappingURL=E:/Practicas/agenda/agenda/src/mail.component.js.map
 
 /***/ }),
 
-/***/ 468:
+/***/ 470:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -508,19 +521,19 @@ var PhoneComponent = (function () {
     PhoneComponent = __decorate([
         __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["U" /* Component */])({
             selector: 'app-phone',
-            template: __webpack_require__(640),
-            styles: [__webpack_require__(634)]
+            template: __webpack_require__(642),
+            styles: [__webpack_require__(636)]
         }), 
         __metadata('design:paramtypes', [(typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */] !== 'undefined' && __WEBPACK_IMPORTED_MODULE_1__angular_http__["b" /* Http */]) === 'function' && _b) || Object])
     ], PhoneComponent);
     return PhoneComponent;
     var _a, _b;
 }());
-//# sourceMappingURL=D:/Poyectos/agenda/agenda/agenda/src/phone.component.js.map
+//# sourceMappingURL=E:/Practicas/agenda/agenda/src/phone.component.js.map
 
 /***/ }),
 
-/***/ 469:
+/***/ 471:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -532,21 +545,7 @@ var PhoneComponent = (function () {
 var environment = {
     production: false
 };
-//# sourceMappingURL=D:/Poyectos/agenda/agenda/agenda/src/environment.js.map
-
-/***/ }),
-
-/***/ 629:
-/***/ (function(module, exports) {
-
-module.exports = ""
-
-/***/ }),
-
-/***/ 630:
-/***/ (function(module, exports) {
-
-module.exports = "\r\nbr{\r\n    clear: both;\r\n}\r\n.left-side{\r\n    width: 15vw;\r\n    float: left;\r\n}\r\n.rigth-side{\r\n    width: 85vw;\r\n    float: right;\r\n}"
+//# sourceMappingURL=E:/Practicas/agenda/agenda/src/environment.js.map
 
 /***/ }),
 
@@ -560,7 +559,7 @@ module.exports = ""
 /***/ 632:
 /***/ (function(module, exports) {
 
-module.exports = ""
+module.exports = "\nbr{\n    clear: both;\n}\n.left-side{\n    width: 15vw;\n    float: left;\n}\n.rigth-side{\n    width: 85vw;\n    float: right;\n}"
 
 /***/ }),
 
@@ -581,46 +580,60 @@ module.exports = ""
 /***/ 635:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n\n  <div class=\"col-1 bg-info\"><i class=\"fa fa-home fa-2x\"></i></div>\n\n  <div class=\"col-11\">\n    <div class=\"form-group\">\n      <label class=\"label contol-label col-12\">\n        Calle:\n        <input type=\"text\" [(ngModel)]=\"address.street\" class=\"form-control\">\n      </label>\n    </div>\n    <div class=\"form-group\">\n      <label class=\"label contol-label col-12\">\n        Número:\n        <input type=\"text\" [(ngModel)]=\"address.number\" class=\"form-control\">\n      </label>\n    </div>\n    <div class=\"form-group\">\n      <label class=\"label contol-label col-12\">\n        Ciudad:\n        <input type=\"text\" [(ngModel)]=\"address.city\" class=\"form-control\">\n      </label>\n    </div>\n    <div class=\"form-group\">\n      <label class=\"label contol-label col-12\">\n        Estado:\n        <input type=\"text\" [(ngModel)]=\"address.state\" class=\"form-control\">\n      </label>\n    </div>\n    <div class=\"form-group\">\n      <label class=\"label contol-label col-12\">\n        Pais:\n        <input type=\"text\" [(ngModel)]=\"address.Country\" class=\"form-control\">\n      </label>\n    </div>\n    <div class=\"form-group\">\n      <label class=\"label contol-label col-12\">\n        Código Postal:\n        <input type=\"text\" [(ngModel)]=\"address.code\" class=\"form-control\">\n      </label>\n    </div>\n  </div>\n</div>\n"
+module.exports = ""
 
 /***/ }),
 
 /***/ 636:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container\">\r\n  <div class=\"left-side col-2 bg-dark vh-100\">\r\n    <ul class=\"list-group\">\r\n      <li class=\"list-group-item\">\r\n        <button type=\"button\" class=\"btn btn-xs btn-default\" (click)=\"mode='list'\">Lista</button>\r\n      </li>\r\n      <li class=\"list-group-item\">\r\n        <button type=\"button\" class=\"btn btn-xs btn-default\" (click)=\"mode='edit'\">Detalle</button>\r\n      </li>\r\n    </ul>\r\n  </div>\r\n  <div class=\"rigth-side col-10\">\r\n    <app-contact-list *ngIf=\"mode=='list'\"></app-contact-list>\r\n    <app-contact *ngIf=\"mode=='edit'\">....</app-contact>\r\n  </div>\r\n\r\n  <br />\r\n</div>\r\n"
+module.exports = ""
 
 /***/ }),
 
 /***/ 637:
 /***/ (function(module, exports) {
 
-module.exports = "<table class=\"table table-striped table-hover\">\n  <tr *ngFor=\"let c of contacts\">\n    <td>{{c.name}} </td>\n    <td>{{c.phones[0].number}}</td>\n    <td><span *ngIf=\"c.mails.length>0\">{{c.mails[0].mailAddress}}</span></td>\n  </tr>\n  \n</table>\n"
+module.exports = "<div class=\"row\">\n\n  <div class=\"col-1 bg-info\"><i class=\"fa fa-home fa-2x\"></i></div>\n\n  <div class=\"col-11\">\n    <div class=\"form-group\">\n      <label class=\"label contol-label col-12\">\n        Calle:\n        <input type=\"text\" [(ngModel)]=\"address.street\" class=\"form-control\" maxlength=\"50\">\n      </label>\n    </div>\n    <div class=\"form-group\">\n      <label class=\"label contol-label col-12\">\n        Número:\n        <input type=\"text\" [(ngModel)]=\"address.number\" class=\"form-control\" maxlength=\"15\">\n      </label>\n    </div>\n    <div class=\"form-group\">\n      <label class=\"label contol-label col-12\">\n        Ciudad:\n        <input type=\"text\" [(ngModel)]=\"address.city\" class=\"form-control\" maxlength=\"50\">\n      </label>\n    </div>\n    <div class=\"form-group\">\n      <label class=\"label contol-label col-12\">\n        Estado:\n        <input type=\"text\" [(ngModel)]=\"address.state\" class=\"form-control\" maxlength=\"50\">\n      </label>\n    </div>\n    <div class=\"form-group\">\n      <label class=\"label contol-label col-12\">\n        Pais:\n        <input type=\"text\" [(ngModel)]=\"address.country\" class=\"form-control\" maxlength=\"50\">\n      </label>\n    </div>\n    <div class=\"form-group\">\n      <label class=\"label contol-label col-12\">\n        Código Postal:\n        <input type=\"text\" [(ngModel)]=\"address.code\" class=\"form-control\" maxlength=\"10\">\n      </label>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
 /***/ 638:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"form-horizontal\">\r\n  <div class=\"form-group\">\r\n    <label class=\"label contol-label col-12\">\r\n      Nombre:\r\n      <input type=\"text\" name=\"name\" [(ngModel)]=\"name\" class=\"form-control\" />\r\n    </label>\r\n  </div>\r\n  <div class=\"form-group\">\r\n    <label class=\"label contol-label col-12\">\r\n      Compañia:\r\n      <input type=\"text\" name=\"company\" [(ngModel)]=\"company\" class=\"form-control\" />\r\n    </label>\r\n  </div>\r\n  <div class=\"row\" style=\"margin: 0\">\r\n    <div class=\"col-11\">\r\n      <div *ngFor=\"let p of phones; let i = index\" class=\"form-group row\" style=\"margin: .5rem 0\">\r\n        <div class=\"col-11\">\r\n          <app-phone [phone]=\"p\"></app-phone>\r\n        </div>\r\n        <div class=\"col-1\">\r\n          <button type=\"button\" *ngIf=\"phones.length>1\" (click)=\"phones.splice(i,1)\" class=\"btn btn-danger\"><i\r\n              class=\"fa fa-minus\"></i></button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-1\" style=\"position: relative; bottom: 0;vertical-align: bottom;\">\r\n      <button type=\"button\" (click)=\"addPhone()\" class=\"btn btn-primary\"><i class=\"fa fa-plus\"></i></button>\r\n    </div>\r\n  </div>\r\n\r\n  <div class=\"row\" style=\"margin: 0\">\r\n    <div class=\"col-11\">\r\n      <div *ngFor=\"let m of mails; let i = index\" class=\"form-group row\" style=\"margin: .5rem 0\">\r\n        <div class=\"col-11\">\r\n          <app-mail [mail]=\"m\"></app-mail>\r\n        </div>\r\n        <div class=\"col-1\">\r\n          <button type=\"button\" *ngIf=\"mails.length>1\" (click)=\"mails.splice(i,1)\" class=\"btn btn-danger\"><i\r\n              class=\"fa fa-minus\"></i></button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-1\">\r\n      <button type=\"button\" (click)=\"addMail()\" class=\"btn btn-primary\"><i class=\"fa fa-plus\"></i></button>\r\n    </div>\r\n  </div>\r\n  <div class=\"row\" style=\"margin: 0\">\r\n    <div class=\"col-11\">\r\n      <div *ngFor=\"let a of addresses; let i = index\" class=\"form-group row\" style=\"margin: .5rem 0\">\r\n        <div class=\"col-11\">\r\n          <app-address [address]=\"a\"></app-address>\r\n        </div>\r\n        <div class=\"col-1\">\r\n          <button type=\"button\" *ngIf=\"addresses.length>1\" (click)=\"addresses.splice(i,1)\" class=\"btn btn-danger\"><i\r\n              class=\"fa fa-minus\"></i></button>\r\n        </div>\r\n      </div>\r\n    </div>\r\n    <div class=\"col-1\">\r\n      <button type=\"button\" (click)=\"addAddress()\" class=\"btn btn-primary\"><i class=\"fa fa-plus\"></i></button>\r\n    </div>\r\n  </div>\r\n</div>\r\n<div class=\"text-right\">\r\n  <button>Cancelar</button>\r\n  <button type=\"button\" (click)=\"add()\">Guardar</button>\r\n</div>\r\n"
+module.exports = "<div class=\"container\">\n  <div class=\"left-side col-2 bg-dark vh-100\">\n    <ul class=\"list-group\">\n      <li class=\"list-group-item\">\n        <button type=\"button\" class=\"btn btn-xs btn-default\" (click)=\"mode='list'\">Lista</button>\n      </li>\n      <li class=\"list-group-item\">\n        <button type=\"button\" class=\"btn btn-xs btn-default\" (click)=\"mode='edit'\">Detalle</button>\n      </li>\n    </ul>\n  </div>\n  <div class=\"rigth-side col-10\">\n    <app-contact-list *ngIf=\"mode=='list'\"  (selectedContact)=\"onContactChanged($event)\"></app-contact-list>\n    <app-contact *ngIf=\"mode=='edit'\" [(contact)]=\"workingContact\" >....</app-contact>\n  </div>\n\n  <br />\n</div>\n"
 
 /***/ }),
 
 /***/ 639:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\r\n  <span class=\"col-1 bg-info\"><i class=\"fa fa-envelope-o fa-2x\"></i></span>\r\n  <select [(ngModel)]=\"mail.mailTypeId\" class=\"form-control col-3\">\r\n    <option value=\"0\">Seleccionar</option>\r\n    <option *ngFor=\"let t of mailTypes\" [value]=\"t.mailTypeId\">{{t.name}}</option>\r\n  </select>\r\n  <input type=\"email\" name=\"mailAddress\" [(ngModel)]=\"mail.mailAddress\" class=\"form-control col-8\" />\r\n</div>\r\n"
+module.exports = "<table class=\"table table-striped table-hover\">\n  <tr *ngFor=\"let c of contacts\" (click)=\"onSelectContact(c)\">\n    <td>{{c.name}} </td>\n    <td>{{c.phones[0].number}}</td>\n    <td><span *ngIf=\"c.mails.length>0\">{{c.mails[0].mailAddress}}</span></td>\n  </tr>\n  \n</table>\n"
 
 /***/ }),
 
 /***/ 640:
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <span class=\"col-1 bg-info\"><i class=\"fa fa-phone fa-2x\"></i></span>\n  <select [(ngModel)]=\"phone.phoneTypeId\" class=\"form-control col-3\">\n    <option value=\"0\">Seleccionar</option>\n    <option *ngFor=\"let t of phoneTypes\" [value]=\"t.phoneTypeId\">{{t.name}}</option>\n  </select>\n  <input type=\"text\" name=\"number\" [(ngModel)]=\"phone.number\" class=\"form-control col-8\" />\n</div>\n"
+module.exports = "<div class=\"form-horizontal\">\n  <div class=\"form-group\">\n    <label class=\"label contol-label col-12\">\n      Nombre:\n      <input type=\"text\" name=\"name\" [(ngModel)]=\"contact.name\" class=\"form-control\" />\n    </label>\n  </div>\n  <div class=\"form-group\">\n    <label class=\"label contol-label col-12\">\n      Compañia:\n      <input type=\"text\" name=\"company\" [(ngModel)]=\"contact.company\" class=\"form-control\" />\n    </label>\n  </div>\n  <div class=\"row\" style=\"margin: 0\">\n    <div class=\"col-11\">\n      <div *ngFor=\"let p of contact.phones; let i = index\" class=\"form-group row\" style=\"margin: .5rem 0\">\n        <div class=\"col-11\">\n          <app-phone [phone]=\"p\"></app-phone>\n        </div>\n        <div class=\"col-1\">\n          <button type=\"button\" *ngIf=\"contact.phones.length>1\" (click)=\"phones.splice(i,1)\" class=\"btn btn-danger\"><i\n              class=\"fa fa-minus\"></i></button>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-1\" style=\"position: relative; bottom: 0;vertical-align: bottom;\">\n      <button type=\"button\" (click)=\"addPhone()\" class=\"btn btn-primary\"><i class=\"fa fa-plus\"></i></button>\n    </div>\n  </div>\n\n  <div class=\"row\" style=\"margin: 0\">\n    <div class=\"col-11\">\n      <div *ngFor=\"let m of contact.mails; let i = index\" class=\"form-group row\" style=\"margin: .5rem 0\">\n        <div class=\"col-11\">\n          <app-mail [mail]=\"m\"></app-mail>\n        </div>\n        <div class=\"col-1\">\n          <button type=\"button\" *ngIf=\"contact.mails.length>1\" (click)=\"mails.splice(i,1)\" class=\"btn btn-danger\"><i\n              class=\"fa fa-minus\"></i></button>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-1\">\n      <button type=\"button\" (click)=\"addMail()\" class=\"btn btn-primary\"><i class=\"fa fa-plus\"></i></button>\n    </div>\n  </div>\n  <div class=\"row\" style=\"margin: 0\">\n    <div class=\"col-11\">\n      <div *ngFor=\"let a of contact.addresses; let i = index\" class=\"form-group row\" style=\"margin: .5rem 0\">\n        <div class=\"col-11\">\n          <app-address [address]=\"a\"></app-address>\n        </div>\n        <div class=\"col-1\">\n          <button type=\"button\" *ngIf=\"contact.addresses.length>1\" (click)=\"addresses.splice(i,1)\" class=\"btn btn-danger\"><i\n              class=\"fa fa-minus\"></i></button>\n        </div>\n      </div>\n    </div>\n    <div class=\"col-1\">\n      <button type=\"button\" (click)=\"addAddress()\" class=\"btn btn-primary\"><i class=\"fa fa-plus\"></i></button>\n    </div>\n  </div>\n</div>\n<div class=\"text-right\">\n  <button>Cancelar</button>\n  <button type=\"button\" (click)=\"add()\">Guardar</button>\n</div>\n"
 
 /***/ }),
 
-/***/ 658:
+/***/ 641:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n  <span class=\"col-1 bg-info\"><i class=\"fa fa-envelope-o fa-2x\"></i></span>\n  <select [(ngModel)]=\"mail.mailTypeId\" class=\"form-control col-3\">\n    <option value=\"0\">Seleccionar</option>\n    <option *ngFor=\"let t of mailTypes\" [value]=\"t.mailTypeId\">{{t.name}}</option>\n  </select>\n  <input type=\"email\" name=\"mailAddress\" [(ngModel)]=\"mail.mailAddress\" class=\"form-control col-8\" />\n</div>\n"
+
+/***/ }),
+
+/***/ 642:
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n  <span class=\"col-1 bg-info\"><i class=\"fa fa-phone fa-2x\"></i></span>\n  <select [(ngModel)]=\"phone.phoneTypeId\" class=\"form-control col-3\">\n    <option value=\"0\">Seleccionar</option>\n    <option *ngFor=\"let t of phoneTypes\" [value]=\"t.phoneTypeId\">{{t.name}}</option>\n  </select>\n  <input type=\"phone\" name=\"number\" [(ngModel)]=\"phone.number\" class=\"form-control col-8\" maxlength=\"15\" />\n</div>\n"
+
+/***/ }),
+
+/***/ 660:
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__(355);
@@ -628,5 +641,5 @@ module.exports = __webpack_require__(355);
 
 /***/ })
 
-},[658]);
+},[660]);
 //# sourceMappingURL=main.bundle.map

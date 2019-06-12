@@ -1,5 +1,5 @@
 <table class="table table-striped table-hover">
-  <tr *ngFor="let c of contacts">
+  <tr *ngFor="let c of contacts" (click)="onSelectContact(c)">
     <td>{{c.name}} </td>
     <td>{{c.phones[0].number}}</td>
     <td><span *ngIf="c.mails.length>0">{{c.mails[0].mailAddress}}</span></td>
